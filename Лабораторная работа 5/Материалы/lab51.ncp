@@ -1,0 +1,107 @@
+<Project>
+  <Name>untitled</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>untitled</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Lab5_1</Name>
+        <Access>Public</Access>
+        <Location left="10" top="32" />
+        <Size width="162" height="95" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static void main()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Data</Name>
+        <Access>Public</Access>
+        <Location left="458" top="32" />
+        <Size width="198" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Data()</Member>
+        <Member type="Method">public void createCon()</Member>
+        <Member type="Method">public void selectElements()</Member>
+        <Member type="Method">public String showDol()</Member>
+        <Member type="Method">public String showSot()</Member>
+        <Member type="Method">public String AddToDol(Doljnost p)</Member>
+        <Member type="Method">public String AddToSot(Sotrudnic p)</Member>
+        <Member type="Method">public String DeleteFromDol(int id)</Member>
+        <Member type="Method">public String DeleteFromSot(int id)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Doljnost</Name>
+        <Access>Public</Access>
+        <Location left="158" top="147" />
+        <Size width="228" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private int oklad</Member>
+        <Member type="Field">private String name</Member>
+        <Member type="Constructor">public Doljnost(int id, String name, int oklad)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Sotrudnic</Name>
+        <Access>Public</Access>
+        <Location left="86" top="319" />
+        <Size width="397" height="196" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private int wtime</Member>
+        <Member type="Field">private int id_d</Member>
+        <Member type="Field">private String fio</Member>
+        <Member type="Field">private String bday</Member>
+        <Member type="Field">private String tel</Member>
+        <Member type="Constructor">public Sotrudnic(int id, String fio, String bday, int wtime, String tel, int id_d)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <Label>uses</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="2">
+        <Label>uses</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="3">
+        <Label>uses</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>46</X>
+          <Y>407</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="2">
+        <Label>uses</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="3">
+        <Label>uses</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>576</X>
+          <Y>416</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
