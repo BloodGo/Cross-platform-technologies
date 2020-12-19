@@ -1,60 +1,59 @@
 <Project>
-  <Name>untitled</Name>
+  <Name>lr5</Name>
   <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
     <Name>5_1(uml)</Name>
     <Language>Java</Language>
     <Entities>
       <Entity type="Class">
-        <Name>Lab5_1</Name>
+        <Name>Labwork51</Name>
         <Access>Public</Access>
-        <Location left="10" top="32" />
+        <Location left="126" top="34" />
         <Size width="162" height="95" />
         <Collapsed>False</Collapsed>
         <Member type="Method">public static void main()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>Data</Name>
+        <Name>Operations</Name>
         <Access>Public</Access>
-        <Location left="458" top="32" />
+        <Location left="111" top="176" />
         <Size width="198" height="230" />
         <Collapsed>False</Collapsed>
-        <Member type="Constructor">public Data()</Member>
-        <Member type="Method">public void createCon()</Member>
-        <Member type="Method">public void selectElements()</Member>
-        <Member type="Method">public String showDol()</Member>
-        <Member type="Method">public String showSot()</Member>
-        <Member type="Method">public String AddToDol(Doljnost p)</Member>
-        <Member type="Method">public String AddToSot(Sotrudnic p)</Member>
-        <Member type="Method">public String DeleteFromDol(int id)</Member>
-        <Member type="Method">public String DeleteFromSot(int id)</Member>
+        <Member type="Constructor">public Operations()</Member>
+        <Member type="Method">public void connection()</Member>
+        <Member type="Method">public void exportFromTable()</Member>
+        <Member type="Method">public String table1_show()</Member>
+        <Member type="Method">public String table2_show()</Member>
+        <Member type="Method">public String table1_addl(Procedure p)</Member>
+        <Member type="Method">public String table2_add(Client p)</Member>
+        <Member type="Method">public String table1_delete(int id)</Member>
+        <Member type="Method">public String table2_add(int id)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>Doljnost</Name>
+        <Name>Procedure</Name>
         <Access>Public</Access>
-        <Location left="158" top="147" />
-        <Size width="228" height="145" />
+        <Location left="480" top="135" />
+        <Size width="293" height="162" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private int id</Member>
-        <Member type="Field">private int oklad</Member>
-        <Member type="Field">private String name</Member>
-        <Member type="Constructor">public Doljnost(int id, String name, int oklad)</Member>
+        <Member type="Field">private int name</Member>
+        <Member type="Field">private int price</Member>
+        <Member type="Field">private String time</Member>
+        <Member type="Constructor">public Procedure(int id, String fio, double time, int price)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>Sotrudnic</Name>
+        <Name>Client</Name>
         <Access>Public</Access>
-        <Location left="86" top="319" />
-        <Size width="397" height="196" />
+        <Location left="480" top="312" />
+        <Size width="293" height="162" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private int id</Member>
-        <Member type="Field">private int wtime</Member>
-        <Member type="Field">private int id_d</Member>
         <Member type="Field">private String fio</Member>
-        <Member type="Field">private String bday</Member>
         <Member type="Field">private String tel</Member>
-        <Member type="Constructor">public Sotrudnic(int id, String fio, String bday, int wtime, String tel, int id_d)</Member>
+        <Member type="Field">private int id_pr</Member>
+        <Member type="Constructor">public Client(int id, String fio, String tel, int id_pr)</Member>
         <Modifier>None</Modifier>
       </Entity>
     </Entities>
@@ -63,23 +62,9 @@
         <Label>uses</Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
-      <Relationship type="Association" first="0" second="2">
-        <Label>uses</Label>
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
-      <Relationship type="Association" first="0" second="3">
-        <Label>uses</Label>
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
-        <BendPoint relativeToStartShape="False">
-          <X>46</X>
-          <Y>407</Y>
+        <BendPoint relativeToStartShape="True">
+          <X>50</X>
+          <Y>88</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
@@ -88,6 +73,10 @@
         <Label>uses</Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>455</X>
+          <Y>211</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
@@ -96,8 +85,8 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>576</X>
-          <Y>416</Y>
+          <X>440</X>
+          <Y>439</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
@@ -171,40 +160,40 @@
         <Member type="Method">public void build(String planes)</Member>
       </Entity>
       <Entity type="Class">
-        <Name>Passenger</Name>
+        <Name>Agricultural</Name>
         <Access>Public</Access>
         <Location left="10" top="515" />
         <Size width="162" height="130" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private String planes</Member>
-        <Member type="Constructor">public Passenger()</Member>
+        <Member type="Constructor">public Agricultural()</Member>
         <Member type="Method">public void fly()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>Fighter</Name>
+        <Name>Ambulance</Name>
         <Access>Public</Access>
         <Location left="194" top="515" />
         <Size width="162" height="130" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private String planes</Member>
-        <Member type="Constructor">public Fighter()</Member>
+        <Member type="Constructor">public Ambulance()</Member>
         <Member type="Method">public void fly()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>Sports</Name>
+        <Name>Scout</Name>
         <Access>Public</Access>
         <Location left="377" top="515" />
         <Size width="162" height="128" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private String planes</Member>
-        <Member type="Constructor">public Sports()</Member>
+        <Member type="Constructor">public Scout()</Member>
         <Member type="Method">public void fly()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>PlantA</Name>
+        <Name>PlantForAgri</Name>
         <Access>Public</Access>
         <Location left="580" top="515" />
         <Size width="162" height="130" />
@@ -213,7 +202,7 @@
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>PlantB</Name>
+        <Name>PlantForAmbul</Name>
         <Access>Public</Access>
         <Location left="762" top="515" />
         <Size width="162" height="130" />
@@ -222,7 +211,7 @@
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>PlantC</Name>
+        <Name>PlantForScout</Name>
         <Access>Public</Access>
         <Location left="942" top="515" />
         <Size width="162" height="130" />
@@ -290,6 +279,8 @@
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="8" second="5">
+        <Label>
+        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
@@ -314,8 +305,6 @@
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="11" second="6">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
@@ -395,8 +384,6 @@
     </Entities>
     <Relationships>
       <Relationship type="Association" first="0" second="3">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
@@ -407,8 +394,6 @@
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="0" second="4">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
@@ -426,8 +411,6 @@
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Dependency" first="6" second="1">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
@@ -444,8 +427,6 @@
         <EndOrientation>Vertical</EndOrientation>
       </Relationship>
       <Relationship type="Dependency" first="6" second="2">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
@@ -516,8 +497,6 @@
         <EndOrientation>Vertical</EndOrientation>
       </Relationship>
       <Relationship type="Association" first="2" second="3">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
@@ -602,13 +581,16 @@
       <Entity type="Class">
         <Name>BuildProject</Name>
         <Access>Public</Access>
-        <Location left="243" top="47" />
-        <Size width="162" height="213" />
+        <Location left="653" top="28" />
+        <Size width="162" height="264" />
         <Collapsed>False</Collapsed>
-        <Member type="Method">public abstract void getFloars()</Member>
+        <Member type="Method">public abstract String getName()</Member>
+        <Member type="Method">public abstract String getBuildingType()</Member>
+        <Member type="Method">public abstract String getCountFloars()</Member>
         <Member type="Method">public abstract void getColor()</Member>
         <Member type="Method">public abstract void getFoundation()</Member>
-        <Member type="Method">public abstract void getCarcassF()</Member>
+        <Member type="Method">public abstract String getFloarCarcass()</Member>
+        <Member type="Method">public abstract String getCountRooms()</Member>
         <Member type="Method">public abstract void getWiring()</Member>
         <Member type="Method">public abstract void getPlumbing()</Member>
         <Member type="Method">public final void getCarcassBuild()</Member>
@@ -616,33 +598,39 @@
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>School</Name>
+        <Name>Administration</Name>
         <Access>Public</Access>
-        <Location left="94" top="330" />
-        <Size width="162" height="196" />
+        <Location left="494" top="362" />
+        <Size width="162" height="247" />
         <Collapsed>False</Collapsed>
-        <Member type="Constructor">public School()</Member>
-        <Member type="Method">public void getFloars()</Member>
-        <Member type="Method">public void getColor()</Member>
-        <Member type="Method">public void getFoundation()</Member>
-        <Member type="Method">public void getCarcassF()</Member>
-        <Member type="Method">public void getWiring()</Member>
-        <Member type="Method">public void getPlumbing()</Member>
+        <Member type="Constructor">public Administration()</Member>
+        <Member type="Method">public String getName()</Member>
+        <Member type="Method">public String getBuildingType()</Member>
+        <Member type="Method">public String getCountFloars()</Member>
+        <Member type="Method">public String getColor()</Member>
+        <Member type="Method">public String getFoundation()</Member>
+        <Member type="Method">public String getFloarCarcass()</Member>
+        <Member type="Method">public String getWiring()</Member>
+        <Member type="Method">public String getPlumbing()</Member>
+        <Member type="Method">public String getCountRooms()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>OfficeCenter</Name>
+        <Name>Warehouse</Name>
         <Access>Public</Access>
-        <Location left="400" top="330" />
-        <Size width="162" height="196" />
+        <Location left="806" top="362" />
+        <Size width="162" height="247" />
         <Collapsed>False</Collapsed>
-        <Member type="Constructor">public OfficeCenter()</Member>
-        <Member type="Method">public void getFloars()</Member>
-        <Member type="Method">public void getColor()</Member>
-        <Member type="Method">public void getFoundation()</Member>
-        <Member type="Method">public void getCarcassF()</Member>
-        <Member type="Method">public void getWiring()</Member>
-        <Member type="Method">public void getPlumbing()</Member>
+        <Member type="Constructor">public Warehouse()</Member>
+        <Member type="Method">public String getName()</Member>
+        <Member type="Method">public String getBuildingType()</Member>
+        <Member type="Method">public String getCountFloars()</Member>
+        <Member type="Method">public String getColor()</Member>
+        <Member type="Method">public String getFoundation()</Member>
+        <Member type="Method">public String getFloarCarcass()</Member>
+        <Member type="Method">public String getWiring()</Member>
+        <Member type="Method">public String getPlumbing()</Member>
+        <Member type="Method">public String getCountRooms()</Member>
         <Modifier>None</Modifier>
       </Entity>
     </Entities>
@@ -662,52 +650,6 @@
     <Language>Java</Language>
     <Entities>
       <Entity type="Class">
-        <Name>School</Name>
-        <Access>Public</Access>
-        <Location left="256" top="343" />
-        <Size width="162" height="196" />
-        <Collapsed>False</Collapsed>
-        <Member type="Constructor">public School()</Member>
-        <Member type="Method">public void getFloars()</Member>
-        <Member type="Method">public void getColor()</Member>
-        <Member type="Method">public void getFoundation()</Member>
-        <Member type="Method">public void getCarcassF()</Member>
-        <Member type="Method">public void getWiring()</Member>
-        <Member type="Method">public void getPlumbing()</Member>
-        <Modifier>None</Modifier>
-      </Entity>
-      <Entity type="Class">
-        <Name>OfficeCenter</Name>
-        <Access>Public</Access>
-        <Location left="562" top="343" />
-        <Size width="162" height="196" />
-        <Collapsed>False</Collapsed>
-        <Member type="Constructor">public OfficeCenter()</Member>
-        <Member type="Method">public void getFloars()</Member>
-        <Member type="Method">public void getColor()</Member>
-        <Member type="Method">public void getFoundation()</Member>
-        <Member type="Method">public void getCarcassF()</Member>
-        <Member type="Method">public void getWiring()</Member>
-        <Member type="Method">public void getPlumbing()</Member>
-        <Modifier>None</Modifier>
-      </Entity>
-      <Entity type="Class">
-        <Name>BuildProject</Name>
-        <Access>Public</Access>
-        <Location left="405" top="60" />
-        <Size width="162" height="213" />
-        <Collapsed>False</Collapsed>
-        <Member type="Method">public abstract void getFloars()</Member>
-        <Member type="Method">public abstract void getColor()</Member>
-        <Member type="Method">public abstract void getFoundation()</Member>
-        <Member type="Method">public abstract void getCarcassF()</Member>
-        <Member type="Method">public abstract void getWiring()</Member>
-        <Member type="Method">public abstract void getPlumbing()</Member>
-        <Member type="Method">public final void getCarcassBuild()</Member>
-        <Member type="Method">public final void BuildingPlan()</Member>
-        <Modifier>Abstract</Modifier>
-      </Entity>
-      <Entity type="Class">
         <Name>TemplatePaternDemo</Name>
         <Access>Public</Access>
         <Location left="42" top="166" />
@@ -716,23 +658,147 @@
         <Member type="Method">public static void main()</Member>
         <Modifier>None</Modifier>
       </Entity>
+      <Entity type="Class">
+        <Name>Warehouse</Name>
+        <Access>Public</Access>
+        <Location left="575" top="412" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Warehouse()</Member>
+        <Member type="Method">public String getName()</Member>
+        <Member type="Method">public String getBuildingType()</Member>
+        <Member type="Method">public String getCountFloars()</Member>
+        <Member type="Method">public String getColor()</Member>
+        <Member type="Method">public String getFoundation()</Member>
+        <Member type="Method">public String getFloarCarcass()</Member>
+        <Member type="Method">public String getWiring()</Member>
+        <Member type="Method">public String getPlumbing()</Member>
+        <Member type="Method">public String getCountRooms()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Administration</Name>
+        <Access>Public</Access>
+        <Location left="263" top="412" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Administration()</Member>
+        <Member type="Method">public String getName()</Member>
+        <Member type="Method">public String getBuildingType()</Member>
+        <Member type="Method">public String getCountFloars()</Member>
+        <Member type="Method">public String getColor()</Member>
+        <Member type="Method">public String getFoundation()</Member>
+        <Member type="Method">public String getFloarCarcass()</Member>
+        <Member type="Method">public String getWiring()</Member>
+        <Member type="Method">public String getPlumbing()</Member>
+        <Member type="Method">public String getCountRooms()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BuildProject</Name>
+        <Access>Public</Access>
+        <Location left="422" top="78" />
+        <Size width="162" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public abstract String getName()</Member>
+        <Member type="Method">public abstract String getBuildingType()</Member>
+        <Member type="Method">public abstract String getCountFloars()</Member>
+        <Member type="Method">public abstract void getColor()</Member>
+        <Member type="Method">public abstract void getFoundation()</Member>
+        <Member type="Method">public abstract String getFloarCarcass()</Member>
+        <Member type="Method">public abstract String getCountRooms()</Member>
+        <Member type="Method">public abstract void getWiring()</Member>
+        <Member type="Method">public abstract void getPlumbing()</Member>
+        <Member type="Method">public final void getCarcassBuild()</Member>
+        <Member type="Method">public final void BuildingPlan()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
     </Entities>
     <Relationships>
-      <Relationship type="Generalization" first="1" second="2">
+      <Relationship type="Generalization" first="1" second="3">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
       </Relationship>
-      <Relationship type="Generalization" first="0" second="2">
+      <Relationship type="Generalization" first="2" second="3">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
       </Relationship>
-      <Relationship type="Association" first="3" second="2">
-        <Label>uses</Label>
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>5_1(class)</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Client</Name>
+        <Access>Public</Access>
+        <Location left="408" top="356" />
+        <Size width="293" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private String fio</Member>
+        <Member type="Field">private String tel</Member>
+        <Member type="Field">private int id_pr</Member>
+        <Member type="Constructor">public Client(int id, String fio, String tel, int id_pr)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Procedure</Name>
+        <Access>Public</Access>
+        <Location left="81" top="356" />
+        <Size width="293" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private int name</Member>
+        <Member type="Field">private int price</Member>
+        <Member type="Field">private String time</Member>
+        <Member type="Constructor">public Procedure(int id, String fio, double time, int price)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Operations</Name>
+        <Access>Public</Access>
+        <Location left="273" top="41" />
+        <Size width="198" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Operations()</Member>
+        <Member type="Method">public void connection()</Member>
+        <Member type="Method">public void exportFromTable()</Member>
+        <Member type="Method">public String table1_show()</Member>
+        <Member type="Method">public String table2_show()</Member>
+        <Member type="Method">public String table1_addl(Procedure p)</Member>
+        <Member type="Method">public String table2_add(Client p)</Member>
+        <Member type="Method">public String table1_delete(int id)</Member>
+        <Member type="Method">public String table2_add(int id)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Labwork51</Name>
+        <Access>Public</Access>
+        <Location left="53" top="41" />
+        <Size width="162" height="95" />
+        <Collapsed>True</Collapsed>
+        <Member type="Method">public static void main()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="2" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>237</X>
-          <Y>181</Y>
+          <X>443</X>
+          <Y>297</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>

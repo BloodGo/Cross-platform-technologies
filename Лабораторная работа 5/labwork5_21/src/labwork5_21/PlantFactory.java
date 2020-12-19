@@ -7,14 +7,14 @@ public class PlantFactory extends AbstractFactory{
 	}
 	@Override
 	public Plant getPlant(String plantType) {
-		if (plantType.equalsIgnoreCase("A")) {
-			return new PlantA();
+		if (plantType.equalsIgnoreCase("ForAgricultural")) {
+			return new PlantForAgri();
 		}
-		else if (plantType.equalsIgnoreCase("B")) {
-			return new PlantB();
+		else if (plantType.equalsIgnoreCase("ForAmbulance")) {
+			return new PlantForAmbul();
 		}
-		else if (plantType.equalsIgnoreCase("C")) {
-			return new PlantC();
+		else if (plantType.equalsIgnoreCase("ForScout")) {
+			return new PlantForScout();
 		}
 		return null;
 	}

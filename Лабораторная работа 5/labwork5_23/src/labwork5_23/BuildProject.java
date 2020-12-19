@@ -2,25 +2,30 @@ package labwork5_23;
 
 public abstract class BuildProject {
 
-	public abstract void getFloars();
-	public abstract void getColor();
-	public abstract void getFoundation();
-	public abstract void getCarcassF();
-	public abstract void getWiring();
-	public abstract void getPlumbing();
-	public final void getCarcassBuild() {
+	public abstract String getName();
+	public abstract String getBuildingType();
+	public abstract String getCountFloars();
+	public abstract String getColor();
+	public abstract String getFoundation();
+	public abstract String getFloarCarcass();
+	public abstract String getWiring();
+	public abstract String getPlumbing();
+	public abstract String getCountRooms();
+	public final String getCarcassBuild() {
 		String carcass = "Железобетонный";
-		System.out.println("\tПлан здания:");
-		System.out.println("Каркас здания: " + carcass);
+		return carcass;
 	}
 	public final void BuildingPlan() {
-		getCarcassBuild();
-		getFloars();
-		getColor();
-		getFoundation();
+		System.out.println("\tПлан здания - " + getName());
+		System.out.println("Каркас здания: " + getCarcassBuild());
+		System.out.println("Тип здания: " + getBuildingType());
+		System.out.println("Количество этажей: " + getCountFloars());
+		System.out.println("Цвет здания: " + getColor());
+		System.out.println("Фундамент здания: " + getFoundation());
 		System.out.println("\tПлан этажа:");
-		getCarcassF();
-		getWiring();
-		getPlumbing();
+		System.out.println("Каркас этажа: " + getFloarCarcass());
+		System.out.println("Количество комнат: " + getCountRooms());
+		System.out.println("Электропроводка: " + getWiring());
+		System.out.println("Сантехника: " + getPlumbing());
 	}
 }
