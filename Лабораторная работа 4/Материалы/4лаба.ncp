@@ -1,0 +1,590 @@
+<Project>
+  <Name>4лаба</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>1</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Lab4</Name>
+        <Access>Public</Access>
+        <Location left="64" top="27" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CoffeeGrinder</Name>
+        <Access>Public</Access>
+        <Location left="278" top="354" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private boolean state</Member>
+        <Member type="Field">private boolean timer</Member>
+        <Member type="Field">private String timer_time</Member>
+        <Member type="Field">private String mode</Member>
+        <Member type="Constructor">public CoffeeGrinder()</Member>
+        <Member type="Method">public void setMode(String mode)</Member>
+        <Member type="Method">public void stateOn()</Member>
+        <Member type="Method">public void stateOff()</Member>
+        <Member type="Method">public void timer(String timme)</Member>
+        <Member type="Method">public void getPrint(int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Freezer</Name>
+        <Access>Public</Access>
+        <Location left="477" top="354" />
+        <Size width="162" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private boolean state</Member>
+        <Member type="Field">private boolean timer</Member>
+        <Member type="Field">private String timer_time</Member>
+        <Member type="Field">private int temp</Member>
+        <Member type="Field">private String mode</Member>
+        <Member type="Constructor">public Freezer()</Member>
+        <Member type="Constructor">public Freezer(int temp)</Member>
+        <Member type="Method">public void setTemperature(int temp)</Member>
+        <Member type="Method">public void setMode(String mode)</Member>
+        <Member type="Method">public void stateOn()</Member>
+        <Member type="Method">public void stateOff()</Member>
+        <Member type="Method">public void timer(String timme)</Member>
+        <Member type="Method">public void getPrint(int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>Devices</Name>
+        <Access>Public</Access>
+        <Location left="672" top="158" />
+        <Size width="162" height="112" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void timer(String time)</Member>
+        <Member type="Method">void stateOn()</Member>
+        <Member type="Method">void stateOff()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>ElectroKettle</Name>
+        <Access>Public</Access>
+        <Location left="1057" top="354" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private boolean state</Member>
+        <Member type="Field">private boolean open</Member>
+        <Member type="Field">private boolean timer</Member>
+        <Member type="Field">String timer_time</Member>
+        <Member type="Constructor">public ElectroKettle()</Member>
+        <Member type="Method">public void stateOn()</Member>
+        <Member type="Method">public void stateOff()</Member>
+        <Member type="Method">public void timer(String timme)</Member>
+        <Member type="Method">public void getPrint(int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Hood</Name>
+        <Access>Public</Access>
+        <Location left="871" top="354" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private boolean state</Member>
+        <Member type="Field">private boolean timer</Member>
+        <Member type="Field">private String timer_time</Member>
+        <Member type="Field">private String mode</Member>
+        <Member type="Constructor">public Hood()</Member>
+        <Member type="Method">public void setMode(String mode)</Member>
+        <Member type="Method">public void stateOn()</Member>
+        <Member type="Method">public void stateOff()</Member>
+        <Member type="Method">public void timer(String timme)</Member>
+        <Member type="Method">public void getPrint(int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Lamp</Name>
+        <Access>Public</Access>
+        <Location left="672" top="354" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private boolean state</Member>
+        <Member type="Field">private boolean timer</Member>
+        <Member type="Field">private int bright</Member>
+        <Member type="Field">String timer_time</Member>
+        <Member type="Constructor">public Lamp()</Member>
+        <Member type="Method">public void setBrightness(int bright)</Member>
+        <Member type="Method">public void stateOn()</Member>
+        <Member type="Method">public void stateOff()</Member>
+        <Member type="Method">public void timer(String timme)</Member>
+        <Member type="Method">public void getPrint(int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>My_smart_house</Name>
+        <Access>Public</Access>
+        <Location left="29" top="314" />
+        <Size width="162" height="349" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private CoffeeGrinder[] coff = new CoffeeGrinder[2]</Member>
+        <Member type="Field">private Hood[] hood = new Hood[2]</Member>
+        <Member type="Field">private Lamp[] lamp = new Lamp[2]</Member>
+        <Member type="Field">private Freezer[] freez = new Freezer[2]</Member>
+        <Member type="Field">private ElectroKettel[] ket = new ElectroKettel[2]</Member>
+        <Member type="Method">public void addnew()</Member>
+        <Member type="Method">public void delete()</Member>
+        <Member type="Method">public void change()</Member>
+        <Member type="Method">public void showAll()</Member>
+        <Member type="Method">private String printDevice()</Member>
+        <Member type="Method">private void inputDevices(int p, int device)</Member>
+        <Member type="Method">private int hoodNumder(Hood[] mas)</Member>
+        <Member type="Method">private int lampNumber(Lamp[] mas)</Member>
+        <Member type="Method">private int coffeeNumber(CoffeeGrinder[] mas)</Member>
+        <Member type="Method">private int freezerNumber(Freezer[] mas)</Member>
+        <Member type="Method">private int elKettelNumber(ElectroKettel[] mas)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Lab4</Name>
+        <Access>Public</Access>
+        <Location left="29" top="158" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static void main()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Realization" first="1" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="2" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="6" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="5" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="4" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>2</Name>
+    <Language>Java</Language>
+    <Entities />
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>3</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>ElectroKettle</Name>
+        <Access>Public</Access>
+        <Location left="1091" top="214" />
+        <Size width="162" height="230" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private boolean state</Member>
+        <Member type="Field">private boolean open</Member>
+        <Member type="Field">private boolean timer</Member>
+        <Member type="Field">String timer_time</Member>
+        <Member type="Constructor">public ElectroKettle()</Member>
+        <Member type="Method">public void stateOn()</Member>
+        <Member type="Method">public void stateOff()</Member>
+        <Member type="Method">public void timer(String timme)</Member>
+        <Member type="Method">public void getPrint(int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Hood</Name>
+        <Access>Public</Access>
+        <Location left="923" top="74" />
+        <Size width="162" height="247" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private boolean state</Member>
+        <Member type="Field">private boolean timer</Member>
+        <Member type="Field">private String timer_time</Member>
+        <Member type="Field">private String mode</Member>
+        <Member type="Constructor">public Hood()</Member>
+        <Member type="Method">public void setMode(String mode)</Member>
+        <Member type="Method">public void stateOn()</Member>
+        <Member type="Method">public void stateOff()</Member>
+        <Member type="Method">public void timer(String timme)</Member>
+        <Member type="Method">public void getPrint(int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Lamp</Name>
+        <Access>Public</Access>
+        <Location left="677" top="59" />
+        <Size width="162" height="247" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private boolean state</Member>
+        <Member type="Field">private boolean timer</Member>
+        <Member type="Field">private int bright</Member>
+        <Member type="Field">String timer_time</Member>
+        <Member type="Constructor">public Lamp()</Member>
+        <Member type="Method">public void setBrightness(int bright)</Member>
+        <Member type="Method">public void stateOn()</Member>
+        <Member type="Method">public void stateOff()</Member>
+        <Member type="Method">public void timer(String timme)</Member>
+        <Member type="Method">public void getPrint(int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Freezer</Name>
+        <Access>Public</Access>
+        <Location left="436" top="100" />
+        <Size width="162" height="298" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private boolean state</Member>
+        <Member type="Field">private boolean timer</Member>
+        <Member type="Field">private String timer_time</Member>
+        <Member type="Field">private int temp</Member>
+        <Member type="Field">private String mode</Member>
+        <Member type="Constructor">public Freezer()</Member>
+        <Member type="Constructor">public Freezer(int temp)</Member>
+        <Member type="Method">public void setTemperature(int temp)</Member>
+        <Member type="Method">public void setMode(String mode)</Member>
+        <Member type="Method">public void stateOn()</Member>
+        <Member type="Method">public void stateOff()</Member>
+        <Member type="Method">public void timer(String timme)</Member>
+        <Member type="Method">public void getPrint(int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CoffeeGrinder</Name>
+        <Access>Public</Access>
+        <Location left="275" top="237" />
+        <Size width="162" height="247" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private boolean state</Member>
+        <Member type="Field">private boolean timer</Member>
+        <Member type="Field">private String timer_time</Member>
+        <Member type="Field">private String mode</Member>
+        <Member type="Constructor">public CoffeeGrinder()</Member>
+        <Member type="Method">public void setMode(String mode)</Member>
+        <Member type="Method">public void stateOn()</Member>
+        <Member type="Method">public void stateOff()</Member>
+        <Member type="Method">public void timer(String timme)</Member>
+        <Member type="Method">public void getPrint(int number)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Lab4</Name>
+        <Access>Public</Access>
+        <Location left="698" top="586" />
+        <Size width="162" height="94" />
+        <Collapsed>True</Collapsed>
+        <Member type="Method">public static void main()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>My_smart_house</Name>
+        <Access>Public</Access>
+        <Location left="698" top="362" />
+        <Size width="162" height="349" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private CoffeeGrinder[] coff = new CoffeeGrinder[2]</Member>
+        <Member type="Field">private Hood[] hood = new Hood[2]</Member>
+        <Member type="Field">private Lamp[] lamp = new Lamp[2]</Member>
+        <Member type="Field">private Freezer[] freez = new Freezer[2]</Member>
+        <Member type="Field">private ElectroKettel[] ket = new ElectroKettel[2]</Member>
+        <Member type="Method">public void addnew()</Member>
+        <Member type="Method">public void delete()</Member>
+        <Member type="Method">public void change()</Member>
+        <Member type="Method">public void showAll()</Member>
+        <Member type="Method">private String printDevice()</Member>
+        <Member type="Method">private void inputDevices(int p, int device)</Member>
+        <Member type="Method">private int hoodNumder(Hood[] mas)</Member>
+        <Member type="Method">private int lampNumber(Lamp[] mas)</Member>
+        <Member type="Method">private int coffeeNumber(CoffeeGrinder[] mas)</Member>
+        <Member type="Method">private int freezerNumber(Freezer[] mas)</Member>
+        <Member type="Method">private int elKettelNumber(ElectroKettel[] mas)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="5" second="6">
+        <Label>Добавить</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>643</X>
+          <Y>601</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>714</X>
+          <Y>448</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="6">
+        <Label>Изменить</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>731</X>
+          <Y>561</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>756</X>
+          <Y>432</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="6">
+        <Label>Удалить</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>839</X>
+          <Y>561</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>815</X>
+          <Y>433</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="6">
+        <Label>Отобразить</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>904</X>
+          <Y>610</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>852</X>
+          <Y>449</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="4">
+        <Label>Установить режим</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>638</X>
+          <Y>400</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>355</X>
+          <Y>398</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="4">
+        <Label>Установить таймер</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>635</X>
+          <Y>382</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>355</X>
+          <Y>370</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="4">
+        <Label>Включить/выключить</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>635</X>
+          <Y>364</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>355</X>
+          <Y>307</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="3">
+        <Label>Установить температуру</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>710</X>
+          <Y>332</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>510</X>
+          <Y>313</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="3">
+        <Label>Установить режим</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>710</X>
+          <Y>337</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>510</X>
+          <Y>262</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="3">
+        <Label>Установить таймер</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>710</X>
+          <Y>337</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>509</X>
+          <Y>216</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="3">
+        <Label>Включить/выключить</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>710</X>
+          <Y>327</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>510</X>
+          <Y>170</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="2">
+        <Label>Установить яркость</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>761</X>
+          <Y>235</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>761</X>
+          <Y>129</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="2">
+        <Label>Включить/выключить</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>759</X>
+          <Y>277</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>708</X>
+          <Y>145</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="2">
+        <Label>Установить таймер</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>763</X>
+          <Y>330</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>810</X>
+          <Y>152</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="1">
+        <Label>Установить режим</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>851</X>
+          <Y>337</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1009</X>
+          <Y>299</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="1">
+        <Label>Установить таймер</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>851</X>
+          <Y>337</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1010</X>
+          <Y>246</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="1">
+        <Label>Включить/выключить</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>850</X>
+          <Y>337</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1009</X>
+          <Y>194</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="0">
+        <Label>Устаовить таймер</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>930</X>
+          <Y>400</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="0">
+        <Label>Включить/выключить</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>910</X>
+          <Y>373</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

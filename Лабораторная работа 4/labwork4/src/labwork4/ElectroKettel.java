@@ -1,29 +1,23 @@
 package labwork4;
 
-public class Lamp implements Devices{
-
+public class ElectroKettel implements Devices{
 	private boolean state;
+	private boolean open;
 	private boolean timer;
-	private int bright;
 	String timer_time;
-	public Lamp() {
-		bright=0;
+	public ElectroKettel() {
+		open=false;
 	}
-	public void setBrightness(int bright) {
-		this.bright=bright;
-		System.out.println("Яркость установлена!");
-	}
-	
 	public void stateOn () {
-		if ((bright>5)) {
+		if ((!open)) {
 			state = true;
-			System.out.println("Светильник включен!");
+			System.out.println("Чайник включен!");
 		}
-		else System.out.println("Яркость должна быть больше 5%!");
+		else System.out.println("Нельзя включить устройство не закрыв крышку!");
 	}
 	public void stateOff () {
 		state = false;
-		System.out.println("Светильник выключен!");
+		System.out.println("Чайник выключен!");
 	}
 	
 	public void timer (String timme) {
@@ -38,13 +32,11 @@ public class Lamp implements Devices{
 		}
 	}
 	public void getPrint(int number) {
-		System.out.println("Светильник "+ number);
+		System.out.println("Электрочайник "+ number);
 		System.out.println("Состояние: " + ((state)?"ON":"OFF"));
-		System.out.println("Яркость: " + (bright) + "%");
 		if(timer)
 			System.out.println("Таймер на "+ timer_time);
 		else System.out.println("Состояние таймера: "+ ((timer)?"ON":"OFF"));
 	}
-	
 
 }
